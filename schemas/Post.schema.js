@@ -1,0 +1,37 @@
+const mongoose = require('mongoose')
+
+const PostSchema = mongoose.Schema({
+    isVerified: Boolean,
+    isActive: Boolean,
+    companyName: String,
+    projectName: String,
+    RERANo: String,
+    aboutProject: String,
+    awards: [ String ],
+    startDate: String,
+    endDate: String,
+    state: String,
+    city: String,
+    zipcode: String,
+    street: String,
+    location: [ String ],
+    amenities: [ Object ],
+    images: [ Object ],
+    brochure: String,
+    isDeleted: Boolean,
+    viewsSummary: String,
+    viewDetail: String,
+    comparedLink: [ String ],
+    basicFurnishingDetails: [ Object ],
+    visitedBy: [ String ],
+    contactArray: [ Object ],
+    unitsDetails: [ Object ],
+    type: String,
+    possessionWithin: String,
+    saleType: String,
+    projectType: String,
+    addedDate: String,
+    _360TourLink: String,
+})
+
+module.exports = mongoose.models.Post || mongoose.model('Post', PostSchema)
